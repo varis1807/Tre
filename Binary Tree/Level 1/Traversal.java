@@ -1,4 +1,12 @@
 import java.util.*;
-public class Traversal{
-      k
+
+class Node {
+      int data;
+      Node left;
+      Node right;
+      
+}
+
+public class Traversal {
+
 }
