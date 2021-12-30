@@ -17,5 +17,17 @@ class Node {
 }
 
 public class Traversal {
+      // Pre Order
+      public static ArrayList<Integer> ans = new ArrayList<>();
 
+      public static void PreOrder(Node root, int data) {
+            if (root == null)
+                  return;
+            ans.add(root.data);
+            PreOrder(root.left, data);
+            PreOrder(root.right, data);
+      }
+      public static void main(String[] args) {
+            
+      }
 }
