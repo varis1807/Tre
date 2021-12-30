@@ -28,6 +28,23 @@ public class Traversal {
             PreOrder(root.right);
       }
 
+      public static void PostOrder(Node root) {
+            if (root == null)
+                  return;
+            PreOrder(root.left);
+            PreOrder(root.right);
+            ans.add(root.data);
+      }
+
+      public static void InOrder(Node root) {
+            if (root == null)
+                  return;
+
+            PreOrder(root.left);
+            ans.add(root.data);
+            PreOrder(root.right);
+      }
+
       public static void main(String[] args) {
             Node root = new Node(1);
             root.left = new Node(2);
