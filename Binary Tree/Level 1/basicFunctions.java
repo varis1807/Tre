@@ -13,15 +13,15 @@ public class basicFunctions {
             }
             return count;
             /// 2-------------
-            if (node == null)
+            if (root == null)
                   return 0;
 
-            int leftSize = size(node.left);
-            int rightSize = size(node.right);
+            int leftSize = size(root.left);
+            int rightSize = size(root.right);
 
             return leftSize + rightSize + 1;
             /// 3------------
-            return node == null ? 0 : size(node.left) + size(node.right) + 1;
+            return root == null ? 0 : size(root.left) + size(root.right) + 1;
       }
 
       // sum
@@ -41,13 +41,13 @@ public class basicFunctions {
                   return -(int) 1e9;
             return Math.max(Math.max(max(root.left), max(root.right)), root.data);
 
-            if (node == null)
+            if (root == null)
                   return -(int) 1e9;
 
-            int leftMax = max(node.left);
-            int rightMax = max(node.right);
+            int leftMax = max(root.left);
+            int rightMax = max(root.right);
             // 2-------------------
-            return Math.max(Math.max(leftMax, rightMax), node.data);
+            return Math.max(Math.max(leftMax, rightMax), root.data);
             // ----------3
             // return node == null ? -(int) 1e9 : Math.max(node.data,
             // Math.max(max(node.left), max(node.right)));
@@ -59,13 +59,13 @@ public class basicFunctions {
                   return (int) 1e9;
             return Math.min(Math.min(min(root.left), min(root.right)), root.data);
 
-            if (node == null)
+            if (root == null)
                   return (int) 1e9;
 
-            int leftMax = min(node.left);
-            int rightMax = min(node.right);
+            int leftMax = min(root.left);
+            int rightMax = min(root.right);
             // 2-------------------
-            return Math.min(Math.min(leftMax, rightMax), node.data);
+            return Math.min(Math.min(leftMax, rightMax), root.data);
             // ----------3
             // return node == null ? (int) 1e9 : Math.min(node.data,
             // Math.min(min(node.left), min(node.right)));
@@ -79,17 +79,17 @@ public class basicFunctions {
             int rightH = height(root.right);
             return Math.max(leftH + rightH) + 1;
 
-            return node == null ? -1 : Math.max(height(node.left), height(node.right)) + 1;
+           // return root == null ? -1 : Math.max(height(root.left), height(root.right)) + 1;
       }
 
       // find node
-      public static boolean find(Node root) {
-            if (node == null)
-            return false;
+      public static boolean find(Node root, int data) {
+            if (root == null)
+                  return false;
 
-        if (node.data == data)
-            return true;
+            if (root.data == data)
+                  return true;
 
-        return findData(node.left, data) || findData(node.right, data);
+            return find(root.left, data) || find(root.right, data);
       }
 }
