@@ -30,13 +30,27 @@ public class basicFunctions {
                   return 0;
             int leftSum = sum(root.left);
             int rightSum = sum(root.right);
-            return leftSum+rightSum+root.data;
-             // return node == null ? 0 : sum(node.left) + sum(node.right) + node.data;
+            return leftSum + rightSum + root.data;
+            // return node == null ? 0 : sum(node.left) + sum(node.right) + node.data;
       }
 
       // Max,Min
       public static int max(Node root) {
+            //1--------------
+            if (root == null)
+                  return -(int) 1e9;
+            return Math.max(Math.max(max(root.left), max(root.right)), root.data);
 
+            if (node == null)
+            return -(int) 1e9;
+
+        int leftMax = max(node.left);
+        int rightMax = max(node.right);
+//2-------------------
+        return Math.max(Math.max(leftMax, rightMax), node.data);
+//----------3
+        // return node == null ? -(int) 1e9 : Math.max(node.data,
+        // Math.max(max(node.left), max(node.right)));
       }
 
       public static int min(Node root) {
