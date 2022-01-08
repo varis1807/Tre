@@ -28,6 +28,7 @@ public class Traversal {
             PreOrder(root.right);
       }
 
+      // Post Oreder
       public static void PostOrder(Node root) {
             if (root == null)
                   return;
@@ -36,6 +37,7 @@ public class Traversal {
             ans.add(root.data);
       }
 
+      // In Oreder
       public static void InOrder(Node root) {
             if (root == null)
                   return;
