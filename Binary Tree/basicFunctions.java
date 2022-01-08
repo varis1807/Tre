@@ -2,8 +2,15 @@ import java.util.*;
 
 public class basicFunctions {
       // size
-      public static void size(Node root) {
-
+      public static int size(Node root) {
+            int count = 0;
+            if (root == null)
+                  return 0;
+            else {
+                  count += size(root.left);
+                  count += size(root.right);
+            }
+            return count;
       }
 
       // sum
