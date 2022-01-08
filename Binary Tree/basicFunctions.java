@@ -73,11 +73,23 @@ public class basicFunctions {
 
       // height
       public static int height(Node root) {
+            if (root == null)
+                  return -1;
+            int leftH = height(root.left);
+            int rightH = height(root.right);
+            return Math.max(leftH + rightH) + 1;
 
+            return node == null ? -1 : Math.max(height(node.left), height(node.right)) + 1;
       }
 
       // find node
-      public static int find(Node root) {
+      public static boolean find(Node root) {
+            if (node == null)
+            return false;
 
+        if (node.data == data)
+            return true;
+
+        return findData(node.left, data) || findData(node.right, data);
       }
 }
