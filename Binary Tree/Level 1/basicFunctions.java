@@ -58,7 +58,7 @@ public class basicFunctions {
             if (root == null)
                   return (int) 1e9;
             return Math.min(Math.min(min(root.left), min(root.right)), root.data);
-
+//4--------------
             if (root == null)
                   return (int) 1e9;
 
