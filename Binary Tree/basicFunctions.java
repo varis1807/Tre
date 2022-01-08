@@ -19,4 +19,14 @@ public class basicFunctions {
       public static int min(Node root) {
 
       }
+
+      // height
+      public static int height(Node root) {
+
+      }
+
+      // find node
+      public static int find(Node root) {
+
+      }
 }
