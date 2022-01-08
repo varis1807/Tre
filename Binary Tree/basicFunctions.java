@@ -36,25 +36,39 @@ public class basicFunctions {
 
       // Max,Min
       public static int max(Node root) {
-            //1--------------
+            // 1--------------
             if (root == null)
                   return -(int) 1e9;
             return Math.max(Math.max(max(root.left), max(root.right)), root.data);
 
             if (node == null)
-            return -(int) 1e9;
+                  return -(int) 1e9;
 
-        int leftMax = max(node.left);
-        int rightMax = max(node.right);
-//2-------------------
-        return Math.max(Math.max(leftMax, rightMax), node.data);
-//----------3
-        // return node == null ? -(int) 1e9 : Math.max(node.data,
-        // Math.max(max(node.left), max(node.right)));
+            int leftMax = max(node.left);
+            int rightMax = max(node.right);
+            // 2-------------------
+            return Math.max(Math.max(leftMax, rightMax), node.data);
+            // ----------3
+            // return node == null ? -(int) 1e9 : Math.max(node.data,
+            // Math.max(max(node.left), max(node.right)));
       }
 
       public static int min(Node root) {
+            // 1--------------
+            if (root == null)
+                  return (int) 1e9;
+            return Math.min(Math.min(min(root.left), min(root.right)), root.data);
 
+            if (node == null)
+                  return (int) 1e9;
+
+            int leftMax = min(node.left);
+            int rightMax = min(node.right);
+            // 2-------------------
+            return Math.min(Math.min(leftMax, rightMax), node.data);
+            // ----------3
+            // return node == null ? (int) 1e9 : Math.min(node.data,
+            // Math.min(min(node.left), min(node.right)));
       }
 
       // height
