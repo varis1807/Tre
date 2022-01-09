@@ -44,11 +44,16 @@ public class prtKDistAway {
                   kLevelDwn(root, k, null, ans);
                   return 1;
             }
-            int ld=kWays2(root.left, data, k, block, ans);
-            if(ld!=-1){
-                  kLevelDwn(root.left, k-ld, block, ans);
-                  return ld+1;
+            int ld = kWays2(root.left, data, k, block, ans);
+            if (ld != -1) {
+                  kLevelDwn(root.left, k - ld, block, ans);
+                  return ld + 1;
             }
-            int rd=kWays2(root, data, k, block, ans)
+            int rd = kWays2(root, data, k, block, ans);
+            if (rd != -1) {
+                  kLevelDwn(root.right, k, block, ans);
+                  return rd + 1;
+            }
+            return -1;
       }
 }
