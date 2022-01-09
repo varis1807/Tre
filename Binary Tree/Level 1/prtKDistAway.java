@@ -14,7 +14,7 @@ public class prtKDistAway {
       }
 
       public static void kLevelDwn(Node root, int k, Node block, ArrayList<Node> ans) {
-            if (root == null || k < 0 || root==block)
+            if (root == null || k < 0 || root == block)
                   return;
             if (k == 0) {
                   ans.add(root);
@@ -24,7 +24,7 @@ public class prtKDistAway {
             kLevelDwn(root.right, k - 1, block, ans);
       }
 
-      public static ArrayList<Node> kLvlDwn(Node root, int data, int k) {
+      public static ArrayList<Node> kWay(Node root, int data, int k) {
             ArrayList<Node> list = new ArrayList<>();
             nTrP(root, data, list);
             ArrayList<Node> ans = new ArrayList<>();
@@ -37,7 +37,18 @@ public class prtKDistAway {
       }
 
       // Generic
-      public static void klevelDown(Node root, int k, Node block, ArrayList<Integer> ans) {
-           
+      public static int kWays2(Node root, int data, int k, Node block, ArrayList<Node> ans) {
+            if (root == null)
+                  return -1;
+            if (root.data == data) {
+                  kLevelDwn(root, k, null, ans);
+                  return 1;
+            }
+            int ld=kWays2(root.left, data, k, block, ans);
+            if(ld!=-1){
+                  kLevelDwn(root.left, k-ld, block, ans);
+                  return ld+1;
+            }
+            int rd=kWays2(root, data, k, block, ans)
       }
 }
