@@ -15,3 +15,9 @@ class Node {
       }
 }
 
+public class checkBST {
+      static Node prev=null;
+      public static boolean isBST(Node root) {
+
+      }
+}
