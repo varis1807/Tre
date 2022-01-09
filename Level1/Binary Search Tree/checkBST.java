@@ -42,10 +42,27 @@ public class checkBST {
             int minEle = (int) 1e9;
       }
 
-      public static isBSTPair isBST2(Node root){
-            if(root==null)
-            return new isBSTPair();
-            isBSTPair left=isBST2(root.left);
-            if()
+      public static isBSTPair isBST2(Node node) {
+            if (node == null)
+                  return new isBSTPair();
+
+            isBSTPair left = isBST2(node.left);
+            if (!left.isBST)
+                  return left;
+
+            isBSTPair right = isBST2(node.right);
+            if (!right.isBST)
+                  return right;
+
+            isBSTPair self = new isBSTPair();
+            self.isBST = false;
+
+            if (left.maxEle < node.data && right.minEle > node.data) {
+                  self.maxEle = Math.max(right.maxEle, node.data);
+                  self.minEle = Math.min(left.minEle, node.data);
+                  self.isBST = true;
+            }
+
+            return self;
       }
 }
