@@ -16,6 +16,8 @@ class Node {
 }
 
 public class checkBST {
+
+      // Static
       static Node prev = null;
 
       public static boolean isBST(Node root) {
@@ -31,5 +33,19 @@ public class checkBST {
                   return false;
 
             return true;
+      }
+
+      // Generic
+      public static class isBSTPair {
+            boolean isBST = true;
+            int maxEle = -(int) 1e9;
+            int minEle = (int) 1e9;
+      }
+
+      public static isBSTPair isBST2(Node root){
+            if(root==null)
+            return new isBSTPair();
+            isBSTPair left=isBST2(root.left);
+            if()
       }
 }
