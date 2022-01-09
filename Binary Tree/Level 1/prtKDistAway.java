@@ -37,4 +37,7 @@ public class prtKDistAway {
       }
 
       // Generic
+      public static void klevelDown(Node root, int k, Node block, ArrayList<Integer> ans) {
+           
+      }
 }
