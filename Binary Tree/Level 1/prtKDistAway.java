@@ -1,6 +1,7 @@
 import java.util.*;
 
 public class prtKDistAway {
+      // Static
       public static boolean nTrP(Node root, int data, ArrayList<Node> ans) {
             if (root == null)
                   return false;
@@ -34,4 +35,6 @@ public class prtKDistAway {
             }
             return ans;
       }
+
+      // Generic
 }
