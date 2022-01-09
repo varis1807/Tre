@@ -14,7 +14,7 @@ public class prtKDistAway {
       }
 
       public static void kLevelDwn(Node root, int k, Node block, ArrayList<Node> ans) {
-            if (root == null || k < 0)
+            if (root == null || k < 0 || root==block)
                   return;
             if (k == 0) {
                   ans.add(root);
