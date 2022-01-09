@@ -21,12 +21,32 @@ public class isBalancedTree {
       }
 
       // With Pair
-      public static class balpair {
+      // is balanced optimised
+      public static class balPair {
             int height = -1;
             boolean isBal = true;
       }
 
-      public static balpair isBal2(Node root) {
-            
+      public static balPair isBal2(Node node) {
+            if (node == null)
+                  return new balPair();
+
+            balPair leftPair = isBal2(node.left);
+            if (leftPair.isBal == false)
+                  return leftPair;
+
+            balPair rightPair = isBal2(node.right);
+            if (rightPair.isBal == false)
+                  return rightPair;
+
+            balPair myAns = new balPair();
+            if (Math.abs(leftPair.height - rightPair.height) >= 1) {
+                  myAns.isBal = false;
+                  return myAns;
+            }
+
+            myAns.height = Math.max(leftPair.height, rightPair.height) + 1;
+
+            return myAns;
       }
 }
