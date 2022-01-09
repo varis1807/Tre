@@ -72,15 +72,15 @@ public class basicFunctions {
       }
 
       // height
-      public static int height(Node root) {
-            if (root == null)
-                  return -1;
-            int leftH = height(root.left);
-            int rightH = height(root.right);
-            return Math.max(leftH + rightH) + 1;
+      // public static int height(Node root) {
+      //       if (root == null)
+      //             return -1;
+      //       int leftH = height(root.left);
+      //       int rightH = height(root.right);
+      //       return Math.max(leftH + rightH) + 1;
 
-           // return root == null ? -1 : Math.max(height(root.left), height(root.right)) + 1;
-      }
+      //      // return root == null ? -1 : Math.max(height(root.left), height(root.right)) + 1;
+      // }
 
       // find node
       public static boolean find(Node root, int data) {
