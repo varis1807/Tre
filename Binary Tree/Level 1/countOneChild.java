@@ -38,6 +38,7 @@ public class countOneChild {
             root.right.right = new Node(6);
             root.right.left.left = new Node(7);
             root.right.right.left = new Node(8);
-            System.out.println(COC(root));
+            // System.out.println(COC(root));
+            exactlyOneChild(root);
       }
 }

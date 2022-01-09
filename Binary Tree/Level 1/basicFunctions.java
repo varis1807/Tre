@@ -13,15 +13,15 @@ public class basicFunctions {
             }
             return count;
             /// 2-------------
-            if (root == null)
-                  return 0;
+            // if (root == null)
+            //       return 0;
 
-            int leftSize = size(root.left);
-            int rightSize = size(root.right);
+            // int leftSize = size(root.left);
+            // int rightSize = size(root.right);
 
-            return leftSize + rightSize + 1;
+            // return leftSize + rightSize + 1;
             /// 3------------
-            return root == null ? 0 : size(root.left) + size(root.right) + 1;
+            // return root == null ? 0 : size(root.left) + size(root.right) + 1;
       }
 
       // sum
@@ -41,13 +41,13 @@ public class basicFunctions {
                   return -(int) 1e9;
             return Math.max(Math.max(max(root.left), max(root.right)), root.data);
 
-            if (root == null)
-                  return -(int) 1e9;
+            // if (root == null)
+            //       return -(int) 1e9;
 
-            int leftMax = max(root.left);
-            int rightMax = max(root.right);
-            // 2-------------------
-            return Math.max(Math.max(leftMax, rightMax), root.data);
+            // int leftMax = max(root.left);
+            // int rightMax = max(root.right);
+            // // 2-------------------
+            // return Math.max(Math.max(leftMax, rightMax), root.data);
             // ----------3
             // return node == null ? -(int) 1e9 : Math.max(node.data,
             // Math.max(max(node.left), max(node.right)));
@@ -59,13 +59,13 @@ public class basicFunctions {
                   return (int) 1e9;
             return Math.min(Math.min(min(root.left), min(root.right)), root.data);
 //4--------------
-            if (root == null)
-                  return (int) 1e9;
+            // if (root == null)
+            //       return (int) 1e9;
 
-            int leftMax = min(root.left);
-            int rightMax = min(root.right);
-            // 2-------------------
-            return Math.min(Math.min(leftMax, rightMax), root.data);
+            // int leftMax = min(root.left);
+            // int rightMax = min(root.right);
+            // // 2-------------------
+            // return Math.min(Math.min(leftMax, rightMax), root.data);
             // ----------3
             // return node == null ? (int) 1e9 : Math.min(node.data,
             // Math.min(min(node.left), min(node.right)));
