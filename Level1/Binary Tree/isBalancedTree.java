@@ -6,15 +6,27 @@ public class isBalancedTree {
       }
 
       public static boolean isBal(Node root) {
-            if(root==null)
+            if (root == null)
+                  return true;
+            if (!isBal(root.left))
+                  return false;
+            if (!isBal(root.right))
+                  return true;
+            int lh = height(root.left);
+            int rh = height(root.right);
+            int diff = Math.abs(lh - rh);
+            if (diff > 1)
+                  return false;
             return true;
-            if(!isBal(root.left)) return false;
-            if(!isBal(root.right)) return true;
-            int lh=height(root.left);
-            int rh=height(root.right);
-            int diff=Math.abs(lh-rh);
-            if(diff>1)
-            return false;
-            return true;
+      }
+
+      // With Pair
+      public static class balpair {
+            int height = -1;
+            boolean isBal = true;
+      }
+
+      public static balpair isBal2(Node root) {
+            
       }
 }
