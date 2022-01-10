@@ -1,20 +1,10 @@
 import java.util.*;
 
 public class BurnNode {
+      public static void burningTree(Node root, Node data) {
+            ArrayList<ArrayList<Integer>> ans = new ArrayList<>();
+            find_burningTre(root, data, ans);
 
-      public static void getBurningNodesAtSpecificTime(Node root, int time, ArrayList<ArrayList<Integer>> ans,
-                  Node blocker) {
-            if (root == null || root == blocker)
-                  return;
-
-            if (time == ans.size()) {
-                  ans.add(new ArrayList<>());
-            }
-
-            ans.get(time).add(root.val);
-
-            getBurningNodesAtSpecificTime(root.left, time + 1, ans, blocker);
-            getBurningNodesAtSpecificTime(root.right, time + 1, ans, blocker);
       }
 
       public static int find_burningTre(Node root, Node data, ArrayList<ArrayList<Integer>> ans) {
@@ -45,10 +35,19 @@ public class BurnNode {
             return -1;
       }
 
-      public static void burningTree(Node root, Node data) {
-            ArrayList<ArrayList<Integer>> ans = new ArrayList<>();
-            find_burningTre(root, data, ans);
+      public static void getBurningNodesAtSpecificTime(Node root, int time, ArrayList<ArrayList<Integer>> ans,
+                  Node blocker) {
+            if (root == null || root == blocker)
+                  return;
 
+            if (time == ans.size()) {
+                  ans.add(new ArrayList<>());
+            }
+
+            ans.get(time).add(root.val);
+
+            getBurningNodesAtSpecificTime(root.left, time + 1, ans, blocker);
+            getBurningNodesAtSpecificTime(root.right, time + 1, ans, blocker);
       }
 
       public static void main(String[] args) {
