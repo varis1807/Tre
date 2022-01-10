@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class implementation {
+public class BFS_implementation {
 
       public void level_order(Node root) {
             LinkedList<Node> q = new LinkedList<>();
