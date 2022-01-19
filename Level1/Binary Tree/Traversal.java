@@ -41,7 +41,6 @@ public class Traversal {
       public static void InOrder(Node root) {
             if (root == null)
                   return;
-
             PreOrder(root.left);
             ans.add(root.data);
             PreOrder(root.right);
