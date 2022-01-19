@@ -54,7 +54,7 @@ public class basicFunctions {
 
       // Max,Min
       public static int max(Node root) {
-            // 1-----------------------------------
+            // 1------------------------------------
             if (root == null)
                   return -(int) 1e9;
             return Math.max(Math.max(max(root.left), max(root.right)), root.data);
