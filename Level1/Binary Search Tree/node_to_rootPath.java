@@ -19,8 +19,6 @@ class Node {
 public class node_to_rootPath {
     Node node;
     public static Scanner scn = new Scanner(System.in);
-
-   
    public static ArrayList<Integer> ntrp(Node node, int data) {
         ArrayList<Integer> list = new ArrayList<>();
      boolean flag=false;
