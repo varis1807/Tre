@@ -28,14 +28,14 @@ public class basicFunctions {
                   count += size(root.right);
             }
             return count;
+            
             /// 2-------------
             // if (root == null)
             // return 0;
-
             // int leftSize = size(root.left);
             // int rightSize = size(root.right);
-
             // return leftSize + rightSize + 1;
+
             /// 3------------
             // return root == null ? 0 : size(root.left) + size(root.right) + 1;
       }
