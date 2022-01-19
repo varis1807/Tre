@@ -28,7 +28,7 @@ public class basicFunctions {
                   count += size(root.right);
             }
             return count;
-            
+
             /// 2-------------
             // if (root == null)
             // return 0;
@@ -42,11 +42,13 @@ public class basicFunctions {
 
       // sum
       public static int sum(Node root) {
+            // 1---------------------
             if (root == null)
                   return 0;
             int leftSum = sum(root.left);
             int rightSum = sum(root.right);
             return leftSum + rightSum + root.data;
+            // 2------------------------
             // return node == null ? 0 : sum(node.left) + sum(node.right) + node.data;
       }
 
