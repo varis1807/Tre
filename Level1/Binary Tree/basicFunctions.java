@@ -1,4 +1,5 @@
 import java.util.*;
+
 class Node {
       int data;
       Node left;
@@ -14,6 +15,7 @@ class Node {
             this(data, null, null);
       }
 }
+
 public class basicFunctions {
       // size
       public static int size(Node root) {
@@ -28,7 +30,7 @@ public class basicFunctions {
             return count;
             /// 2-------------
             // if (root == null)
-            //       return 0;
+            // return 0;
 
             // int leftSize = size(root.left);
             // int rightSize = size(root.right);
@@ -56,7 +58,7 @@ public class basicFunctions {
             return Math.max(Math.max(max(root.left), max(root.right)), root.data);
 
             // if (root == null)
-            //       return -(int) 1e9;
+            // return -(int) 1e9;
 
             // int leftMax = max(root.left);
             // int rightMax = max(root.right);
@@ -72,9 +74,9 @@ public class basicFunctions {
             if (root == null)
                   return (int) 1e9;
             return Math.min(Math.min(min(root.left), min(root.right)), root.data);
-//4--------------
+            // 4--------------
             // if (root == null)
-            //       return (int) 1e9;
+            // return (int) 1e9;
 
             // int leftMax = min(root.left);
             // int rightMax = min(root.right);
@@ -87,13 +89,14 @@ public class basicFunctions {
 
       // height
       // public static int height(Node root) {
-      //       if (root == null)
-      //             return -1;
-      //       int leftH = height(root.left);
-      //       int rightH = height(root.right);
-      //       return Math.max(leftH + rightH) + 1;
+      // if (root == null)
+      // return -1;
+      // int leftH = height(root.left);
+      // int rightH = height(root.right);
+      // return Math.max(leftH + rightH) + 1;
 
-      //      // return root == null ? -1 : Math.max(height(root.left), height(root.right)) + 1;
+      // // return root == null ? -1 : Math.max(height(root.left), height(root.right))
+      // + 1;
       // }
 
       // find node
