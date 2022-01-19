@@ -54,19 +54,19 @@ public class basicFunctions {
 
       // Max,Min
       public static int max(Node root) {
-            // 1--------------
+            // 1-----------------------------------
             if (root == null)
                   return -(int) 1e9;
             return Math.max(Math.max(max(root.left), max(root.right)), root.data);
 
+            // 2-------------------------------------
             // if (root == null)
             // return -(int) 1e9;
-
             // int leftMax = max(root.left);
             // int rightMax = max(root.right);
-            // // 2-------------------
             // return Math.max(Math.max(leftMax, rightMax), root.data);
-            // ----------3
+
+            // 3-------------------------------------
             // return node == null ? -(int) 1e9 : Math.max(node.data,
             // Math.max(max(node.left), max(node.right)));
       }
