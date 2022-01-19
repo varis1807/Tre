@@ -124,6 +124,6 @@ public class basicFunctions {
             root.right.right=new Node(9);
             root.right.right.left=new Node(7);
             root.right.right.right=new Node(8);
-            Sysi
+            System.out.println(find(root, 8));
       }
 }
