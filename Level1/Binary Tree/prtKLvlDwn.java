@@ -11,4 +11,7 @@ public class prtKLvlDwn {
             kLevelDwn(root.left, k-1, ans);
             kLevelDwn(root.right, k-1, ans);
       }
+      public static void main(String[] args) {
+            
+      }
 }
