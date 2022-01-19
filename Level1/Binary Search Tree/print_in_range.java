@@ -10,4 +10,8 @@ public class print_in_range {
 
         printInRange(node.right, lr, rr);
     }
+
+    public static void main(String[] args) {
+
+    }
 }
