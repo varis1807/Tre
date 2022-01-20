@@ -7,6 +7,9 @@ public class traversal {
             if (root == null)
                   return list;
             ans.add(root.data);
-            
+            for (Node child : root.children)
+                  preOreder(child);
+
+            return ans;
       }
 }
