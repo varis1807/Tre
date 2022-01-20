@@ -1,7 +1,5 @@
 import java.util.*;
 
-
-
 public class basicFunction {
       // size----------------------------
       public static int size(Node root) {
@@ -37,12 +35,13 @@ public class basicFunction {
       // Find-------------------------------
       public static boolean find(Node root, int data) {
             while (root != null) {
-                  if (root.data == data) 
+                  if (root.data == data)
                         return true;
                   else if (root.data > data)
                         root = root.left;
                   else
                         root = root.right;
             }
+            return false;
       }
 }
