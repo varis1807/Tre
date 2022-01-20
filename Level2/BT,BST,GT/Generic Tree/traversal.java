@@ -19,7 +19,7 @@ class Node {
 
 public class traversal {
       // post order
-      List<Integer> ans = new ArrayList<>();
+      public static List<Integer> ans = new ArrayList<>();
 
       public List<Integer> postorder(Node root) {
             if (root == null)
@@ -30,11 +30,17 @@ public class traversal {
             return ans;
       }
 
-      //pre order
-      public static List<Integer> preOrder(Node root){
-            if(root=null)
+      // pre order
+      public static List<Integer> preOrder(Node root) {
+            if (root == null)
+                  return ans;
+            ans.add(root.val);
+            for (Node child : root.children)
+                  preOrder(child);
+return ans;
       }
-      public static void main(String[] args){
+
+      public static void main(String[] args) {
 
       }
 }
