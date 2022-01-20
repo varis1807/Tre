@@ -1,4 +1,5 @@
 import java.util.*;
+
 class Node {
       int val;
       Node left;
@@ -91,11 +92,12 @@ public class LCA {
             return left || right;
       }
 
-  public Node lowestCommonAncestor1(Node root, Node p, Node q) {
-      find(root,p,q);
-      return lca;
-  }
+      public Node lowestCommonAncestor1(Node root, Node p, Node q) {
+            find(root, p, q);
+            return lca;
+      }
 
-  
+      public static void main(String[] args) {
 
+      }
 }
