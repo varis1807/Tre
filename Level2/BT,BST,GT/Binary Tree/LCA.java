@@ -98,7 +98,7 @@ public class LCA {
       }
 
       public static void main(String[] args) {
-            Node root = new root(3);
+            Node root = new Node(3);
             root.left = new Node(5);
             root.right = new Node(1);
             root.left.left = new Node(6);
@@ -107,6 +107,8 @@ public class LCA {
             root.left.right.right = new Node(4);
             root.right.left = new Node(0);
             root.right.right = new Node(8);
-
+            Node p = new Node(6);
+            Node q = new Node(4);
+            System.out.println(lowestCommonAncestor1(root, p, q));
       }
 }
