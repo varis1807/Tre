@@ -16,7 +16,7 @@ public class genericTree {
         int h = -1;
         for (Node child : root.childs)
             h = Math.max(height(child), h);
-
+ 
         return h + 1;
     }
 
