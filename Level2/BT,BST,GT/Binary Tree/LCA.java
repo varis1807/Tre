@@ -60,9 +60,9 @@ public class LCA {
       }
 
       // lca optimized (no extra space)
-      Node lca = null;
+      public static Node lca = null;
 
-      public boolean find(Node root, Node p, Node q) {
+      public static boolean find(Node root, Node p, Node q) {
             if (root == null)
                   return false;
 
@@ -92,7 +92,7 @@ public class LCA {
             return left || right;
       }
 
-      public Node lowestCommonAncestor1(Node root, Node p, Node q) {
+      public static Node lowestCommonAncestor1(Node root, Node p, Node q) {
             find(root, p, q);
             return lca;
       }
@@ -107,6 +107,6 @@ public class LCA {
             root.left.right.right = new Node(4);
             root.right.left = new Node(0);
             root.right.right = new Node(8);
-            
+
       }
 }
