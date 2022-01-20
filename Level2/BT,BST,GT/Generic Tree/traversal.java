@@ -29,6 +29,11 @@ public class traversal {
             ans.add(root.val);
             return ans;
       }
+
+      //pre order
+      public static List<Integer> preOrder(Node root){
+            if(root=null)
+      }
       public static void main(String[] args){
 
       }
