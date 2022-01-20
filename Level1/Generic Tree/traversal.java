@@ -7,6 +7,6 @@ public class traversal {
             if (root == null)
                   return list;
             ans.add(root.data);
-     
+            
       }
 }
