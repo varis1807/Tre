@@ -1,6 +1,6 @@
 import java.util.*;
 
-import javax.lang.model.util.ElementScanner14;
+
 
 public class basicFunction {
       // size----------------------------
@@ -35,7 +35,7 @@ public class basicFunction {
       }
 
       // Find-------------------------------
-      public static boolean find(Nde root, int data) {
+      public static boolean find(Node root, int data) {
             while (root != null) {
                   if (root.data == data) 
                         return true;
