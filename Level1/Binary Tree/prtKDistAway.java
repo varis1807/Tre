@@ -51,7 +51,7 @@ public class prtKDistAway {
             }
             int rd = kWays2(root, data, k, block, ans);
             if (rd != -1) {
-                  kLevelDwn(root.right, k, block, ans);
+                  kLevelDwn(root.right, k-rd, block, ans);
                   return rd + 1;
             }
             return -1;
