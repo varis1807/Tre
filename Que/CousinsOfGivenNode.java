@@ -17,7 +17,7 @@ public class CousinsOfGivenNode {
       {
           //code here
           if(root==null)
-          return new ArrayList<Integer>{-1};
+          return new ArrayList<Integer>(-1);
           
           
       }
