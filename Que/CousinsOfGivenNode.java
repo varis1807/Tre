@@ -1,4 +1,4 @@
 import java.util.*;
-public static CousinsOfGivenNode{
-      
+public class CousinsOfGivenNode{
+
 }
