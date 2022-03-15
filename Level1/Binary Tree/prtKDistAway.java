@@ -36,6 +36,9 @@ public class prtKDistAway {
             return ans;
       }
 
+
+
+      //-----------------------------------------------------
       // Generic
       public static int kWays2(Node root, int data, int k, Node block, ArrayList<Node> ans) {
             if (root == null)
